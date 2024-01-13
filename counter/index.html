@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mains">
+        <div class="div-1">
+            <p class="demo" aria-readonly="true">0</p>
+            <button id="adding">ADD</button>
+            <button id="remove">Remove</button><br/>
+            <!-- <button id="reset">Reset</button> -->
+        </div>
+    </div>
+</body>
+<script>
+
+    let count=0;
+    const page = document.querySelector('.demo');
+    const add = document.querySelector('#adding');
+    const removing = document.querySelector('#remove');
+    
+    add.addEventListener('click',function(){
+        count++;
+        page.innerHTML=count;
+    })
+    removing.addEventListener("click",function(){
+        if(count>0)
+        {
+            count--
+            page.innerHTML=count;
+        }
+        else{
+            alert('can t count less than zero');
+
+        }
+    })
+</script>
+</html>
